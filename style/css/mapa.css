@@ -1,0 +1,7 @@
+#map {
+  height: 66vh !important;
+}
+
+#map:before {
+  content: 'Hola, qué tal';
+}

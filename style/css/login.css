@@ -1,0 +1,12 @@
+body {
+  background-color: whitesmoke;
+}
+
+.formulario {
+  text-align: center;
+  margin: 0 auto !important;
+  background-color: white;
+  border-radius: 1em;
+  padding: 2em;
+  filter: drop-shadow(0 0 0.5rem #00000022);
+}
