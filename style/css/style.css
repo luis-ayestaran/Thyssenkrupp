@@ -9,7 +9,8 @@
 body {
   overflow-x: hidden;
   font-family: 'Roboto'/*, 'Poppins', 'Helvetica Neue', sans-serif*/;
-  color: var(--thyssenkrupp);
+  color: black;
+  /*color: var(--thyssenkrupp);*/
 }
 
 .logo {
