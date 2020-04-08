@@ -54,45 +54,32 @@
         }
 
         function crea_usuario() {
-          //if(isset($_REQUEST['txt_nombre']) && isset($_REQUEST['txt_apellido']) && isset($_REQUEST['txt_username']) && isset($_REQUEST['txt_contrasena'])){
+          if(isset($_REQUEST['txt_nombre'])) {
             $usuario_data['nombre']=$_REQUEST['txt_nombre'];
             $usuario_data['direccion']=$_REQUEST['txt_direccion'];
             $usuario_data['ubicRef']=$_REQUEST['slct_lugares'];
             $usuario_data['puesto']=$_REQUEST['txt_puesto'];
             $usuario_data['area']=$_REQUEST['txt_area'];
             $usuario_data['numTel']=$_REQUEST['txt_telefono'];
-            $error_login = "";
             $this->model_u->create($usuario_data);
-            //include('vistas/control_usuarios/login.php');
-            $error_signup = "<b>Bienvenido, " . $usuario_data['nombre'] . ".</b><p class='font-weight-light'> Estás a punto de comenzar.</p>";
-            include('vistas/control_usuarios/header.php');
-            include('vistas/control_usuarios/signup.php');
-            include('vistas/control_usuarios/footer.php');
-          /*} else {
-            $error_signup = "";
-            include('vistas/control_usuarios/signup.php');
-          }*/
-        }
-
-        function confirmarDelete(){
-
-            $usuario_data=NULL;
-
-            if ($_REQUEST['id_usuario']!=0) {
-               $usuario_data=$this->model_u->get_id($_REQUEST['id_usuario']);
+            $usuario_data = $this->model_u->find($_REQUEST['txt_nombre']);
+            include_once('servicios/autenticacion/autenticacion.php');
+            include('vistas/header.php');
+            include('vistas/contenido/eventos.php');
+            include('vistas/footer.php');
+          } else {
+            session_start();
+            if(isset($_SESSION['nombre']) && $_SESSION['nombre'] != '') {
+              include('vistas/header.php');
+              include('vistas/contenido/eventos.php');
+              include('vistas/footer.php');
+            } else {
+              include('vistas/control_usuarios/header.php');
+              include('vistas/control_usuarios/signup.php');
+              include('vistas/control_usuarios/footer.php');
             }
-
-            if ($_REQUEST['id_usuario']==0) {
-                $usuario_date['id_usuario']=$_REQUEST['txt_id_usuario'];
-                $this->model_u->delete($usuario_date['id_usuario']);
-                header("Location: index.php");
-            }
-
-            include_once('vistas/control_usuarios/header.php');
-            include_once('vistas/control_usuarios/confirm.php');
-            include_once('vistas/control_usuarios/footer.php');
+          }
         }
-
 
     }
 ?>

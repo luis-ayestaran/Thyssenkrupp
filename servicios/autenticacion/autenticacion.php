@@ -4,27 +4,27 @@
     error_reporting(0);
   }
   if(isset($usuario_data)) {
-    if($usuario_data['username'] != '' && $usuario_data['contrasena'] != '') {
-      $_SESSION['id_usuario'] = $usuario_data['id_usuario'];
+    if($usuario_data['nombre'] != '') {
       $_SESSION['nombre'] = $usuario_data['nombre'];
-      $_SESSION['apellido'] = $usuario_data['apellido'];
-      $_SESSION['username'] = $usuario_data['username'];
-      $_SESSION['contrasena'] = $usuario_data['contrasena'];
-      $_SESSION['rol'] = $usuario_data['rol'];
+      $_SESSION['direccion'] = $usuario_data['direccion'];
+      $_SESSION['ubicRef'] = $usuario_data['ubicRef'];
+      $_SESSION['puesto'] = $usuario_data['puesto'];
+      $_SESSION['area'] = $usuario_data['area'];
+      $_SESSION['numTel'] = $usuario_data['numTel'];
     } else {
-      $_SESSION['id_usuario'] = '';
       $_SESSION['nombre'] = '';
-      $_SESSION['apellido'] = '';
-      $_SESSION['username'] = '';
-      $_SESSION['contrasena'] = '';
-      $_SESSION['rol'] = '';
+      $_SESSION['direccion'] = '';
+      $_SESSION['ubicRef'] = '';
+      $_SESSION['puesto'] = '';
+      $_SESSION['area'] = '';
+      $_SESSION['numTel'] = '';
     }
   } else {
-    $_SESSION['id_usuario'] = '';
     $_SESSION['nombre'] = '';
-    $_SESSION['apellido'] = '';
-    $_SESSION['username'] = '';
-    $_SESSION['contrasena'] = '';
-    $_SESSION['rol'] = '';
+    $_SESSION['direccion'] = '';
+    $_SESSION['ubicRef'] = '';
+    $_SESSION['puesto'] = '';
+    $_SESSION['area'] = '';
+    $_SESSION['numTel'] = '';
   }
 ?>

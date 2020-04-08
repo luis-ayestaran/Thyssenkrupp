@@ -1,26 +1,19 @@
-<?php
-  //require('header.php');
-?>
   <main role="main">
   <section class="jumbotron text-center bg-light text-white" style="background-color: #229ace !important;">
      <br><br>
      <div class="container">
-       <h1 class="display-3">¡Bienvenido a ThyssenKrupp!</h1>
-       <p class="lead">Estás a un paso de formar parte de nuestra familia, sólo lee las instrucciones y presiona el botón de continuar</p>
-       <p class="lead">para comenzar tu prueba.</p>
-       <?php if($_SESSION['rol'] == 'administrador') :?>
-       <a class="btn btn-outline-light" href="index.php?c=evento_controller&m=index">Administra eventos</a>
-     <?php endif; ?>
+       <h1 class="display-3">¡Bienvenido a ThyssenKrupp, <?php echo $_SESSION['nombre'] ?>!</h1>
+       <p class="lead">Estás a un paso de formar parte de nuestra familia. <br> Lee las instrucciones y presiona el botón <b>Continuar</b> para comenzar tu prueba.</p>
      </div>
    </section>
 
    <section class="container text-center">
-     
-     <!--Seccion de instrucciones-->
-     <div class="album py-5">
-    <div class="container">
-    </div>
-       <div class="row"> <!--Seccion de filas-->
+
+    <!--Seccion de instrucciones-->
+    <div class="album py-5">
+      <div class="container">
+      </div>
+      <div class="row"> <!--Seccion de filas-->
            <div class="col-md-4">
              <div class="card mb-4 box-shadow">
                <img class="card-img-top" src="https://d2f0ora2gkri0g.cloudfront.net/5c/63/5c63bf72-7e48-4f6e-b112-22cfbe0c30e9.gif" alt="holi">
@@ -29,7 +22,7 @@
                  <p class="card-text">Contarás con 60 minutos para resolver la evaluación</p>
                  <div class="d-flex justify-content-between align-items-center">
                    <div class="btn-group">
-                     
+
                    </div>
                  </div>
                </div>
@@ -44,7 +37,7 @@
                  <p class="card-text">Lee cada pregunta con atención y contesta con la respuesta que creas es la correcta</p>
                  <div class="d-flex justify-content-between align-items-center">
                    <div class="btn-group">
-                     
+
                    </div>
                  </div>
                </div>
@@ -59,7 +52,7 @@
                  <p class="card-text">No puedes usar calculadora ni celular</p>
                  <div class="d-flex justify-content-between align-items-center">
                    <div class="btn-group">
-                     
+
                    </div>
                  </div>
                </div>
@@ -74,7 +67,7 @@
                  <p class="card-text">En la hoja en blanco que le proporcionará su aplicador puede hacer anotaciones, en caso de necesitar más méncionelo.</p>
                  <div class="d-flex justify-content-between align-items-center">
                    <div class="btn-group">
-                     
+
                    </div>
                  </div>
                </div>
@@ -89,7 +82,7 @@
                  <p class="card-text">El primer apartado de la evaluación constará de las operaciones de suma, resta, multiplicación y división; la cual deberá responder utilizando solo valores númericos sin signos de puntuación</p>
                  <div class="d-flex justify-content-between align-items-center">
                    <div class="btn-group">
-                     
+
                    </div>
                  </div>
                </div>
@@ -104,7 +97,7 @@
                  <p class="card-text">En esta sección se le mostrarán cifras númericas que deberá responder con numero o letra, sea el caso, si es con número deberá hacerlo sin signos de puntuación y si es con letra respetando todos los espacios posibles</p>
                  <div class="d-flex justify-content-between align-items-center">
                    <div class="btn-group">
-                     
+
                    </div>
                  </div>
                </div>
@@ -119,7 +112,7 @@
                  <p class="card-text">Para este apartado dependiendo del valor posicional que se te indique, deberás escibir con letra el número que se forme desde esa posición</p>
                  <div class="d-flex justify-content-between align-items-center">
                    <div class="btn-group">
-                     
+
                    </div>
                  </div>
                </div>
@@ -134,7 +127,7 @@
                  <p class="card-text">Se le planteará un problema matemático el cual deberá responder con números sin signos de puntuación </p>
                  <div class="d-flex justify-content-between align-items-center">
                    <div class="btn-group">
-                     
+
                    </div>
                  </div>
                </div>
@@ -149,13 +142,13 @@
                  <p class="card-text">Escribe la fracción correspondiente comenzando por el numerador y después el denominador</p>
                  <div class="d-flex justify-content-between align-items-center">
                    <div class="btn-group">
-                     
+
                    </div>
                  </div>
                </div>
              </div>
            </div>
-           
+
            <div class="col-md-4">
              <div class="card mb-4 box-shadow">
                <img class="card-img-top" src="https://www.formaciongcc.com/wp-content/uploads/2019/07/porcentajes-512x419.jpg" alt="holi">
@@ -164,7 +157,7 @@
                  <p class="card-text">Calcular el porcentaje de las cifras indicadas, en esta ocasión debera utilizar dos decimales divididas por un punto "." </p>
                  <div class="d-flex justify-content-between align-items-center">
                    <div class="btn-group">
-                     
+
                    </div>
                  </div>
                </div>
@@ -179,7 +172,7 @@
                  <p class="card-text">En este apartado sólo deberá indicar el nombre de la grafica correspondiente </p>
                  <div class="d-flex justify-content-between align-items-center">
                    <div class="btn-group">
-                     
+
                    </div>
                  </div>
                </div>
@@ -189,36 +182,10 @@
     </div><!--Termina seccion de instrucciones-->
   </div>
   <!--Termina seccion de instrucciones-->
-       <!--<input class="form-control" type="search" placeholder="Busca un evento" aria-label="Search" name="txt_buscar" style="width: 80%; display: inline !important;" required>-->
-    <form method="post" action="index.php?c=controller&m=index">
-       <button class="btn btn-secondary" type="submit" name="btn_buscar" style="display: inline;"><i class="fas fa-angle-double-right" href="index.php?c=controller&m=index"></i> Continuar</button>
-       
+
+    <form method="post" action="index.php?c=preguntas_controller&m=index">
+       <button class="btn btn-lg btn-primary" type="submit" name="btn_buscar" style="display: inline;">
+         <i class="fas fa-angle-double-right" href="index.php?c=controller&m=index"></i> Continuar
+       </button>
      </form>
    </section>
-
-  
-
-  <!--<div id="map"></div>
-  </main>
-    <script>
-        var map;
-        function initMap() {
-          var myLatLng = {lat: 19.0438393, lng: -98.1982317};
-
-          var map = new google.maps.Map(document.getElementById('map'), {
-            zoom: 16,
-            center: myLatLng
-          });
-
-          var marker = new google.maps.Marker({
-            position: myLatLng,
-            map: map,
-            title: 'Puebla de los Ángeles'
-          });
-        }
-      </script>
-      <script src="../../servicios/localizacion/mapas.js"></script> 
-      <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDhTZ5VApCb-KUhfuETG4SV78Ts0yJdE6A&callback=initMap" async defer></script>
-<?php
-  //require('footer.php');
-?>-->

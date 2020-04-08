@@ -23,13 +23,13 @@
           if (method_exists($controlador, $metodo)) {
             $$controlador->$metodo();
           } else {
-            $controller->login();
+            $controller->signup();
           }
       } else {
-        $controller->login();
+        $controller->signup();
       }
     } else {
-      $controller->login();
+      $controller->signup();
     }
 
 ?>

@@ -31,12 +31,11 @@
 
   <body>
     <header class="hd-image">
-      <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
-        <a class="navbar-brand logo" href="index.php?c=controller&m=index">
+      <nav class="navbar navbar-expand-md navbar-light bg-light fixed-top">
+        <a class="navbar-brand logo" href="index.php?c=preguntas_controller&m=index">
           <h2><b>
-            <i class="fas fa-book-open" style="color: #3ae6ec;"></i>
-            <span style="color: #3ae6ec;">ThyssenKrupp</span>
-           <!--  <span style="color: #ff7a1f;">Pue</span><span style="color: #34e119;">bla</span>-->
+            <img src="style/images/thyssenkrupp_logo.png" class="img-fluid" alt="ThyssenKrupp logo" width="50" height="50" style="margin: 0 0.4em;">
+            <span style="color: var(--thyssenkrupp);">ThyssenKrupp</span>
           </b></h2>
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
@@ -51,15 +50,9 @@
             <li class="nav-item">
               <a class="nav-link text-light" href="index.php?c=evento_controller&m=mostrar_todos">Instrucciones</a>
             </li>
-            <!--<li class="nav-item">
-              <a class="nav-link text-light" href="index.php?c=recinto_controller&m=mostrar_todos">Recintos</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link text-light" href="index.php?c=atractivo_controller&m=mostrar_todos">Atractivos turísticos</a>
-            </li>-->
             <?php if($_SESSION['nombre'] == '') { ?>
             <li class="nav-item">
-              <a class="nav-link btn-primary text-light" href="index.php?c=controller&m=login">Inicia sesión</a>
+              <a class="nav-link btn-primary text-light" href="index.php?c=controller&m=login">Regístrate</a>
             </li>
             <?php } else { ?>
             <li class="nav-item dropdown">

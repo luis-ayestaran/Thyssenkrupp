@@ -84,16 +84,16 @@
         return $query;
     }
 
-    function index(){
+    function index() {
         $operacionesmatematicas=$this->opmath();
         $cadenanumero=$this->cn();
         $numerocadena=$this->nc();
         $fracciones=$this->numfracc();
         $problemas=$this->prob();
         $valorposicional=$this->vp();
-        include_once('vistas/header.php');
+        include_once('vistas/contenido/header.php');
         include_once('vistas/index.php');
-        include_once('vistas/footer.php');
+        include_once('vistas/contenido/footer.php');
     }
 
   }
