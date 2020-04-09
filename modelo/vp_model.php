@@ -30,7 +30,18 @@
           $data = $q->fetch(PDO::FETCH_ASSOC);
           return $data;
       }
-
+      function get_graficas(){
+        $sql= 'SELECT * FROM valorposicion WHERE preguntas IS NULL ORDER BY id_pregunta ASC';
+        $fila=$this->DB->query($sql);
+        $this->registros=$fila;
+        return  $this->registros;
+      }
+      function get_valorposicional(){
+        $sql= 'SELECT * FROM valorposicion WHERE preguntas IS NOT NULL ORDER BY id_pregunta ASC';
+        $fila=$this->DB->query($sql);
+        $this->registros=$fila;
+        return  $this->registros;
+    }
 
     }
 ?>

@@ -30,6 +30,19 @@
           $data = $q->fetch(PDO::FETCH_ASSOC);
           return $data;
       }
+      function get_basicop(){
+        $sql= 'SELECT * FROM opmatematicas WHERE operador <>"%" ORDER BY id_pregunta ASC';
+        $fila=$this->DB->query($sql);
+        $this->registros=$fila;
+        return  $this->registros;
+      }
+
+      function get_porcentop(){
+        $sql= 'SELECT * FROM opmatematicas WHERE operador ="%" ORDER BY id_pregunta ASC';
+        $fila=$this->DB->query($sql);
+        $this->registros=$fila;
+        return  $this->registros;
+      }
 
 
     }

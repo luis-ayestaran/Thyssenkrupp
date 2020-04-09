@@ -32,8 +32,8 @@
       return $query;
     }*/
 
-    function opmat() {
-        $query=$this->model_op_math->get();
+    function opmath() {
+        $query=$this->model_op_math->get_basicop();
         return $query;
     }
 
@@ -102,33 +102,54 @@
       return $prob_imagenes;
     }
 
-    function valpos() {
-        $query=$this->model_vp->get();
-        return $query;
-    }
+    function valorposicional(){
+
+         $query=$this->model_vp->get_valorposicional();
+
+         return $query;
+
+     }
 
     function get_valpos_imagenes($valpos_preguntas) {
       $valpos_imagenes = array();
       foreach($valpos_preguntas as $pregunta) {
         $imagen = $this->model_img->get_id($pregunta['id_imagen']);
         array_push($valpos_imagenes, $imagen);
+
       }
       return $valpos_imagenes;
     }
 
+     function porcentaje(){
+
+         $query=$this->model_op_math->get_porcentop();
+
+         return $query;
+     }
+     function graficas(){
+
+         $query=$this->model_vp->get_graficas();
+
+         return $query;
+       }
+
     function index() {
-      $operacionesmatematicas = $this->opmat();
+      $operacionesmatematicas = $this->opmath();
       //$imagenes_opmat = $this->get_opmat_imagenes($operacionesmatematicas);
       $cadenanumero = $this->cadnum();
       //$imagenes_cadnum = get_cadnum_imagenes($cadenanumero);
       $numerocadena = $this->numcad();
       //$imagenes_numcad = get_numcad_imagenes($numerocadena);
       $fracciones = $this->numfracc();
-      $imagenes_fracc = $this->get_numfracc_imagenes($fracciones);
+      $fraccionesaux = $fracciones;
+      $imagenes_fracc = $this->get_numfracc_imagenes($fraccionesaux);
       $problemas = $this->prob();
       //$imagenes_problem = get_prob_imagenes($problemas);
-      $valorposicional = $this->valpos();
-      $imagenes_valpos = $this->get_valpos_imagenes($valorposicional);
+      $valorposicional=$this->valorposicional();
+      $operacionesporcentaje=$this->porcentaje();
+      $graficas=$this->graficas();
+      $graficasaux=$graficas;
+      $imagenes_valpos = $this->get_valpos_imagenes($graficasaux);
       include_once('vistas/contenido/header.php');
       include_once('vistas/index.php');
       include_once('vistas/contenido/footer.php');
