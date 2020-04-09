@@ -8,6 +8,7 @@
 
      <?php
      $i = 0;
+     $cont_preg = 1;
      $endrow = 4;
      foreach($operacionesmatematicas as $data): ?>
         <?php if($i == $endrow): ?>
@@ -23,11 +24,12 @@
            <div class="col-md-3">
              <div class="card mb-3 box-shadow">
                <div class="card-body">
+                 <p class="text-left"><?php echo $cont_preg . "."; ?></p>
                  <p class="card-text "><?php echo $data['num1']?></p>
                  <p class="card-text"><hi><?php echo $data['operador']?> </h1><hi><?php echo $data['num2']?></h1></p>
                  <hr>
                  <section class="container text-center">
-                     <input class="form-control" type="search" placeholder="" aria-label="Search" name="txt_buscar" style="width: 90%; display: inline !important;" required>
+                     <input class="form-control" type="number" placeholder="" aria-label="Search" id="txt_resp_opmat<?php echo $cont_preg; ?>" name="txt_resp_opmat<?php echo $cont_preg; ?>" style="width: 90%; display: inline !important;" required>
                   </section>
                  <div class="d-flex justify-content-between align-items-center">
                    <div class="btn-group">
@@ -37,7 +39,8 @@
                </div>
              </div>
            </div>
-           <?php $i++;
+           <?php  $i++;
+                  $cont_preg++;
           endforeach;?>
 
           </div>
@@ -74,7 +77,7 @@
 
                  <hr>
                  <section class="container text-center">
-                     <input class="form-control" type="search" placeholder="" aria-label="Search" name="txt_buscar" style="width: 90%; display: inline !important;" required>
+                     <input class="form-control" type="number" placeholder="" aria-label="Search" name="txt_buscar" style="width: 90%; display: inline !important;" required>
                   </section>
                  <div class="d-flex justify-content-between align-items-center">
                    <div class="btn-group">
@@ -109,7 +112,7 @@
 
                           <hr>
                           <section class="container text-center">
-                              <input class="form-control" type="search" placeholder="" aria-label="Search" name="txt_buscar" style="width: 90%; display: inline !important;" required>
+                              <input class="form-control" type="text" placeholder="" aria-label="Search" name="txt_buscar" style="width: 90%; display: inline !important;" required>
                            </section>
                           <div class="d-flex justify-content-between align-items-center">
                             <div class="btn-group">
@@ -160,7 +163,7 @@
 
                  <hr>
                  <section class="container text-center">
-                     <input class="form-control" type="search" placeholder="" aria-label="Search" name="txt_buscar" style="width: 90%; display: inline !important;" required>
+                     <input class="form-control" type="text" placeholder="" aria-label="Search" name="txt_buscar" style="width: 90%; display: inline !important;" required>
                   </section>
                  <div class="d-flex justify-content-between align-items-center">
                    <div class="btn-group">
@@ -206,7 +209,7 @@
 
                  <hr>
                  <section class="container text-center">
-                     <input class="form-control" type="search" placeholder="" aria-label="Search" name="txt_buscar" style="width: 20%; display: inline !important;" required>
+                     <input class="form-control" type="number" placeholder="" aria-label="Search" name="txt_buscar" style="width: 20%; display: inline !important;" required>
                   </section>
                  <div class="d-flex justify-content-between align-items-center">
                    <div class="btn-group">
@@ -250,9 +253,9 @@
                                             echo $numfracc_imagen["path"]?>" height="250"  alt="">
                <div class="card-body">
                  <section class="container text-center">
-                     <input class="form-control" type="search" placeholder="" aria-label="Search" name="txt_buscar" style="width: 20%; display: inline !important;" required>
+                     <input class="form-control" type="number" placeholder="" aria-label="Search" name="txt_buscar" style="width: 20%; display: inline !important;" required>
                      <hr>
-                    <input class="form-control" type="search" placeholder="" aria-label="Search" name="txt_buscar" style="width: 20%; display: inline !important;" required>
+                    <input class="form-control" type="number" placeholder="" aria-label="Search" name="txt_buscar" style="width: 20%; display: inline !important;" required>
                   </section>
                  <div class="d-flex justify-content-between align-items-center">
                    <div class="btn-group">
@@ -298,7 +301,7 @@
 
                  <hr>
                  <section class="container text-center">
-                     <input class="form-control" type="search" placeholder="" aria-label="Search" name="txt_buscar" style="width: 90%; display: inline !important;" required>
+                     <input class="form-control" type="number" pattern="[0-9]+[.[0-9]{2}]?" placeholder="" aria-label="Search" name="txt_buscar" style="width: 90%; display: inline !important;" required>
                   </section>
                  <div class="d-flex justify-content-between align-items-center">
                    <div class="btn-group">
@@ -345,7 +348,7 @@
 
                  <hr>
                  <section class="container text-center">
-                     <input class="form-control" type="search" placeholder="" aria-label="Search" name="txt_buscar" style="width: 90%; display: inline !important;" required>
+                     <input class="form-control" type="text" placeholder="" aria-label="Search" name="txt_buscar" style="width: 90%; display: inline !important;" required>
                   </section>
                  <div class="d-flex justify-content-between align-items-center">
                    <div class="btn-group">
@@ -359,8 +362,9 @@
           endforeach;?>
           <div class="card-body">
           <button class="btn btn-lg btn-primary" type="submit" name="btn_buscar" style="display: inline;">
-            <i class="fas fa-angle-double-right" href="index.php?c=controller&m=index"></i> Finalizar prueba
-          </button></div>
+            Finalizar prueba
+          </button>
+      </div>
   </form>
       <br>
     <br>
