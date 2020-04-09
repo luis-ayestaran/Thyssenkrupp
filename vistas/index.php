@@ -58,6 +58,7 @@
 
     <?php
     $i = 0;
+    $cont_preg = 1;
     $endrow = 6;
 
     foreach($cadenanumero  as $data): ?>
@@ -73,11 +74,12 @@
            <div class="col-md-4">
              <div class="card mb-4 box-shadow">
                <div class="card-body">
+                 <p class="text-left"><?php echo $cont_preg . "."; ?></p>
                  <p class="card-text "><?php echo $data['num']?></p>
 
                  <hr>
                  <section class="container text-center">
-                     <input class="form-control" type="number" placeholder="" aria-label="Search" name="txt_buscar" style="width: 90%; display: inline !important;" required>
+                     <input class="form-control" type="number" placeholder="" aria-label="Search" id="txt_resp_lecturanum<?php echo $cont_preg; ?>" name="txt_resp_lecturanum<?php echo $cont_preg; ?>" style="width: 90%; display: inline !important;" required>
                   </section>
                  <div class="d-flex justify-content-between align-items-center">
                    <div class="btn-group">
@@ -87,12 +89,15 @@
                </div>
              </div>
            </div>
-           <?php $i++;
+           <?php
+              $i++;
+              $cont_preg++;
           endforeach;?>
 
           </div>
           <?php
                  $i = 0;
+                 $cont_preg = 1;
                  $endrow = 6;
 
                   foreach($numerocadena  as $data): ?>
@@ -108,11 +113,12 @@
                     <div class="col-md-4">
                       <div class="card mb-4 box-shadow">
                         <div class="card-body">
+                          <p class="text-left"><?php echo $cont_preg . "."; ?></p>
                           <p class="card-text "><?php echo $data['num']?></p>
 
                           <hr>
                           <section class="container text-center">
-                              <input class="form-control" type="text" placeholder="" aria-label="Search" name="txt_buscar" style="width: 90%; display: inline !important;" required>
+                              <input class="form-control" type="text" placeholder="" aria-label="Search" id="txt_resp_escrituranum<?php echo $cont_preg; ?>" name="txt_resp_escrituranum<?php echo $cont_preg; ?>" style="width: 90%; display: inline !important;" required>
                            </section>
                           <div class="d-flex justify-content-between align-items-center">
                             <div class="btn-group">
@@ -122,7 +128,9 @@
                         </div>
                       </div>
                     </div>
-                    <?php $i++;
+                    <?php
+                      $i++;
+                      $cont_preg++;
               endforeach;?>
                    </div>
                    </div>
@@ -144,6 +152,7 @@
 
     <?php
     $i = 0;
+    $cont_preg = 1;
     $endrow = 6;
 
     foreach($valorposicional as $data): ?>
@@ -159,11 +168,12 @@
            <div class="col-md-4">
              <div class="card mb-4 box-shadow">
                <div class="card-body">
+                 <p class="text-left"><?php echo $cont_preg . "."; ?></p>
                  <p class="card-text "><?php echo $data['preguntas']?></p>
 
                  <hr>
                  <section class="container text-center">
-                     <input class="form-control" type="text" placeholder="" aria-label="Search" name="txt_buscar" style="width: 90%; display: inline !important;" required>
+                     <input class="form-control" type="text" placeholder="" aria-label="Search" id="txt_resp_valorpos<?php echo $cont_preg; ?>" name="txt_resp_valorpos<?php echo $cont_preg; ?>" style="width: 90%; display: inline !important;" required>
                   </section>
                  <div class="d-flex justify-content-between align-items-center">
                    <div class="btn-group">
@@ -173,7 +183,9 @@
                </div>
              </div>
            </div>
-           <?php $i++;
+           <?php
+             $i++;
+             $cont_preg++;
           endforeach;?>
 
           </div>
@@ -190,6 +202,7 @@
 
      <?php
      $i = 0;
+     $cont_preg = 1;
      $endrow = 4;
 
      foreach($problemas as $data): ?>
@@ -205,11 +218,12 @@
            <div class="col-md-12">
              <div class="card mb-12 box-shadow">
                <div class="card-body">
-                 <p class="card-text "><?php echo $data['enunciado']?></p>
+                 <p class="text-left"><?php echo $cont_preg . "."; ?></p>
+                 <p class="text-left "><?php echo $data['enunciado']?></p>
 
                  <hr>
                  <section class="container text-center">
-                     <input class="form-control" type="number" placeholder="" aria-label="Search" name="txt_buscar" style="width: 20%; display: inline !important;" required>
+                     <input class="form-control" type="number" placeholder="" aria-label="Search"id="txt_resp_problemas<?php echo $cont_preg; ?>" name="txt_resp_problemas<?php echo $cont_preg; ?>" style="width: 20%; display: inline !important;" required>
                   </section>
                  <div class="d-flex justify-content-between align-items-center">
                    <div class="btn-group">
@@ -219,7 +233,9 @@
                </div>
              </div>
            </div>
-           <?php $i++;
+           <?php
+             $i++;
+             $cont_preg++;
           endforeach;?>
 
           </div>
@@ -235,6 +251,7 @@
 
      <?php
      $i = 0;
+     $cont_preg = 1;
      $endrow = 6;
 
      foreach($imagenes_fracc as $data): ?>
@@ -249,13 +266,15 @@
          <?php endif; ?>
            <div class="col-md-4">
              <div class="card mb-4 box-shadow">
+               <div class="card-body">
+               <p class="text-left"><?php echo $cont_preg . "."; ?></p>
                <img class="card-img-top" src="<?php  $numfracc_imagen = array_shift($imagenes_fracc);
                                             echo $numfracc_imagen["path"]?>" height="250"  alt="">
-               <div class="card-body">
+
                  <section class="container text-center">
-                     <input class="form-control" type="number" placeholder="" aria-label="Search" name="txt_buscar" style="width: 20%; display: inline !important;" required>
+                     <input class="form-control" type="number" placeholder="" aria-label="Search" id="txt_resp_fraccnumerador<?php echo $cont_preg; ?>" name="txt_resp_fraccnumerador<?php echo $cont_preg; ?>" style="width: 20%; display: inline !important;" required>
                      <hr>
-                    <input class="form-control" type="number" placeholder="" aria-label="Search" name="txt_buscar" style="width: 20%; display: inline !important;" required>
+                    <input class="form-control" type="number" placeholder="" aria-label="Search" id="txt_resp_fraccdenominador<?php echo $cont_preg; ?>" name="txt_resp_fraccdenominador<?php echo $cont_preg; ?>" style="width: 20%; display: inline !important;" required>
                   </section>
                  <div class="d-flex justify-content-between align-items-center">
                    <div class="btn-group">
@@ -265,7 +284,9 @@
                </div>
              </div>
            </div>
-           <?php $i++;
+           <?php
+             $i++;
+             $cont_preg++;
           endforeach;?>
 
           </div>
@@ -282,6 +303,7 @@
 
      <?php
      $i = 0;
+     $cont_preg = 1;
      $endrow = 4;
      foreach($operacionesporcentaje as $data): ?>
         <?php if($i == $endrow): ?>
@@ -296,12 +318,13 @@
            <div class="col-md-3">
              <div class="card mb-3 box-shadow">
                <div class="card-body">
+                 <p class="text-left"><?php echo $cont_preg . "."; ?></p>
                  <p class="card-text "><?php echo $data['num1']?></p>
                  <p class="card-text"><hi><?php echo $data['operador']?> </h1><hi><?php echo $data['num2']?></h1></p>
 
                  <hr>
                  <section class="container text-center">
-                     <input class="form-control" type="number" pattern="[0-9]+[.[0-9]{2}]?" placeholder="" aria-label="Search" name="txt_buscar" style="width: 90%; display: inline !important;" required>
+                     <input class="form-control" type="number" pattern="[0-9]+[.[0-9]{2}]?" placeholder="" aria-label="Search" id="txt_resp_porcentajes<?php echo $cont_preg; ?>" name="txt_resp_porcentajes<?php echo $cont_preg; ?>" style="width: 90%; display: inline !important;" required>
                   </section>
                  <div class="d-flex justify-content-between align-items-center">
                    <div class="btn-group">
@@ -311,7 +334,9 @@
                </div>
              </div>
            </div>
-           <?php $i++;
+           <?php
+             $i++;
+             $cont_preg++;
           endforeach;?>
 
           </div>
@@ -328,6 +353,7 @@
 
      <?php
      $i = 0;
+     $cont_preg = 1;
      $endrow = 6;
 
      foreach($imagenes_valpos as $data): ?>
@@ -343,12 +369,13 @@
            <div class="col-md-4">
              <div class="card mb-4 box-shadow">
                <div class="card-body">
+                 <p class="text-left"><?php echo $cont_preg . "."; ?></p>
                  <img class="card-img-top" src="<?php  $posimages = array_shift($imagenes_valpos);
                                               echo $posimages["path"]?>" height="250"  alt="">
 
                  <hr>
                  <section class="container text-center">
-                     <input class="form-control" type="text" placeholder="" aria-label="Search" name="txt_buscar" style="width: 90%; display: inline !important;" required>
+                     <input class="form-control" type="text" placeholder="" aria-label="Search" id="txt_resp_graficas<?php echo $cont_preg; ?>" name="txt_resp_graficas<?php echo $cont_preg; ?>" style="width: 90%; display: inline !important;" required>
                   </section>
                  <div class="d-flex justify-content-between align-items-center">
                    <div class="btn-group">
@@ -358,7 +385,9 @@
                </div>
              </div>
            </div>
-           <?php $i++;
+           <?php
+             $i++;
+             $cont_preg++;
           endforeach;?>
           <div class="card-body">
           <button class="btn btn-lg btn-primary" type="submit" name="btn_buscar" style="display: inline;">
