@@ -5,7 +5,7 @@
     class numfracc_model extends Model {
 
       function get(){
-          $sql= 'SELECT * FROM numfraccion ORDER BY id_pregunta DESC';
+          $sql= 'SELECT * FROM numfraccion ORDER BY id_pregunta ASC';
           $fila=$this->DB->query($sql);
           $this->registros=$fila;
           return  $this->registros;

@@ -2,6 +2,7 @@
 <div class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-light" >
   <form method="post" action="index.php?c=preguntas_controler&m=opmath" onsubmit="">
    <h1 class="display-6 font-weight-normal text-primary">Operaciones básicas</h1>
+    <h4 >Responde las siguientes operaciones, utilizando sólo números.</h4>
     <br>
     <br>
     <div class="container">
@@ -52,6 +53,7 @@
 
     <div class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-light border: black 3px solid">
    <h1 class="display-6 font-weight-normal text-primary">Lectura y escritura de números naturales</h1>
+   <h4 >Completa con números o letras según corresponda.</h4>
     <br>
     <br>
            <div class="container">
@@ -142,6 +144,7 @@
 
    <div class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-light">
    <h1 class="display-6 font-weight-normal text-primary">Valor de posición de números naturales</h1>
+    <h4>Observa este número y contesta.</h4>
    <br>
      <div class="text-center">
       <img src="style/images/posicional.png" class="img-fluid" alt="Responsive image">
@@ -196,6 +199,7 @@
    </div>
    <div class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-light">
    <h1 class="display-6 font-weight-normal text-primary">Problemas matemáticos</h1>
+    <h4>Resuelve el siguiente problema.</h4>
    <br>
    <br>
    <div class="container">
@@ -245,6 +249,7 @@
    </div>
    <div class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-light">
    <h1 class="display-6 font-weight-normal text-primary">Números fraccionarios</h1>
+    <h4>Escribe la fracción correspondiente a cada imagen.</h4>
    <br>
    <br>
    <div class="container">
@@ -270,7 +275,8 @@
                <p class="text-left"><?php echo $cont_preg . "."; ?></p>
                <img class="card-img-top" src="<?php  $numfracc_imagen = array_shift($imagenes_fracc);
                                             echo $numfracc_imagen["path"]?>" height="250"  alt="">
-
+                  <br>
+                  <br>
                  <section class="container text-center">
                      <input class="form-control" type="number" placeholder="" aria-label="Search" id="txt_resp_fraccnumerador<?php echo $cont_preg; ?>" name="txt_resp_fraccnumerador<?php echo $cont_preg; ?>" style="width: 20%; display: inline !important;" required>
                      <hr>
@@ -297,6 +303,7 @@
    </div>
    <div class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-light">
    <h1 class="display-6 font-weight-normal text-primary">Porcentajes</h1>
+    <h4>Calcula los siguientes porcentajes, de ser necesario coloca sólo dos decimales separados por un punto. </h4>
    <br>
    <br>
    <div class="container">
@@ -347,6 +354,7 @@
    </div>
    <div class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-light">
    <h1 class="display-6 font-weight-normal text-primary">Gráficas</h1>
+      <h4>Completa el nombre de las siguentes gráficas.</h4>
     <br>
     <br>
     <div class="container">
@@ -375,6 +383,7 @@
 
                  <hr>
                  <section class="container text-center">
+                     <h5>Gráfica de:</h5>
                      <input class="form-control" type="text" placeholder="" aria-label="Search" id="txt_resp_graficas<?php echo $cont_preg; ?>" name="txt_resp_graficas<?php echo $cont_preg; ?>" style="width: 90%; display: inline !important;" required>
                   </section>
                  <div class="d-flex justify-content-between align-items-center">
