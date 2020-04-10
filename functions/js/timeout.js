@@ -26,7 +26,7 @@ if (document.fullscreenEnabled) {
 
 //------------------ TIMER ---------------------//
 
-window.setTimeout(alertFunc, 2000, "First parameter", "Second parameter");
+window.setTimeout(alertFunc, 3600000, "First parameter", "Second parameter");
 
 function alertFunc() {
   document.exitFullscreen();

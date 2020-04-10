@@ -1,15 +1,13 @@
 <?php
-  require_once('modelo/imagen_model.php');
-  require_once('modelo/opmath_model.php');
-  require_once('modelo/cn_model.php');
-  require_once('modelo/nc_model.php');
-  require_once('modelo/numfracc_model.php');
-  require_once('modelo/prob_model.php');
-  require_once('modelo/vp_model.php');
+  require_once('modelo/respuestas_opmatematicas_model.php');
+  require_once('modelo/respuestas_cadenanum_model.php');
+  require_once('modelo/respuestas_numerocad_model.php');
+  require_once('modelo/respuestas_numerofracc_model.php');
+  require_once('modelo/respuestas_problemas_model.php');
+  require_once('modelo/respuestas_valorposicion_model.php');
 
   class Respuestas_controller {
 
-    private $model_img;
     private $model_op_math;
     private $model_cn;
     private $model_nc;
@@ -18,12 +16,12 @@
     private $model_vp;
 
     function __construct(){
-        $this->model_rop_math=new resp_opmath_model();
-        $this->model_rcn=new resp_cn_model();
-        $this->model_rnc=new resp_nc_model();
-        $this->model_rresp_numfracc=new resp_resp_numfracc_model();
-        $this->model_rresp_prob=new resp_resp_prob_model();
-        $this->model_rvp=new resp_vp_model();
+        $this->model_rop_math=new respuestas_opmatematicas_model();
+        $this->model_rcn=new respuestas_cadenanum_model();
+        $this->model_rnc=new respuestas_numerocad_model();
+        $this->model_rresp_numfracc=new respuestas_numerofracc_model();
+        $this->model_rresp_prob=new respuestas_problemas_model();
+        $this->model_rvp=new respuestas_valorposicion_model();
     }
 
     function resp_opmath() {

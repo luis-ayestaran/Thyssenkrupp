@@ -2,7 +2,7 @@
 
     require_once('modelo/model.php');
 
-    class respuestas_cadenanum_model extends Model {
+    class respuestas_numerocad_model extends Model {
 
       function get(){
           $sql= 'SELECT * FROM resp_numerocadena ORDER BY id_respuesta ASC';
