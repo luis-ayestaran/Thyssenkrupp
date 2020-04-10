@@ -30,7 +30,7 @@
                  <p class="card-text"><hi><?php echo $data['operador']?> </h1><hi><?php echo $data['num2']?></h1></p>
                  <hr>
                  <section class="container text-center">
-                     <input class="form-control" type="number" placeholder="" aria-label="Search" id="txt_resp_opmat<?php echo $cont_preg; ?>" name="txt_resp_opmat<?php echo $cont_preg; ?>" style="width: 90%; display: inline !important;" required>
+                     <input class="form-control" type="number" pattern="" placeholder="" aria-label="Search" id="txt_resp_opmat<?php echo $cont_preg; ?>" name="txt_resp_opmat<?php echo $cont_preg; ?>" style="width: 90%; display: inline !important;" required>
                   </section>
                  <div class="d-flex justify-content-between align-items-center">
                    <div class="btn-group">
@@ -274,13 +274,13 @@
                <div class="card-body">
                <p class="text-left"><?php echo $cont_preg . "."; ?></p>
                <img class="card-img-top" src="<?php  $numfracc_imagen = array_shift($imagenes_fracc);
-                                            echo $numfracc_imagen["path"]?>" height="250"  alt="">
+                                            echo $numfracc_imagen["path"]?>" height="275"  alt="">
                   <br>
                   <br>
                  <section class="container text-center">
-                     <input class="form-control" type="number" placeholder="" aria-label="Search" id="txt_resp_fraccnumerador<?php echo $cont_preg; ?>" name="txt_resp_fraccnumerador<?php echo $cont_preg; ?>" style="width: 20%; display: inline !important;" required>
+                     <input class="form-control" type="number" placeholder="" aria-label="Search" id="txt_resp_fraccnumerador<?php echo $cont_preg; ?>" name="txt_resp_fraccnumerador<?php echo $cont_preg; ?>" style="width: 30%; display: inline !important;" required>
                      <hr>
-                    <input class="form-control" type="number" placeholder="" aria-label="Search" id="txt_resp_fraccdenominador<?php echo $cont_preg; ?>" name="txt_resp_fraccdenominador<?php echo $cont_preg; ?>" style="width: 20%; display: inline !important;" required>
+                    <input class="form-control" type="number" placeholder="" aria-label="Search" id="txt_resp_fraccdenominador<?php echo $cont_preg; ?>" name="txt_resp_fraccdenominador<?php echo $cont_preg; ?>" style="width: 30%; display: inline !important;" required>
                   </section>
                  <div class="d-flex justify-content-between align-items-center">
                    <div class="btn-group">
