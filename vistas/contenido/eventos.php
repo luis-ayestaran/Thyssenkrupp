@@ -185,7 +185,7 @@
 
     <form method="post" action="index.php?c=preguntas_controller&m=index">
        <button class="btn btn-lg btn-primary" type="submit" name="btn_buscar" style="display: inline;">
-         <i class="fas fa-angle-double-right" href="index.php?c=controller&m=index"></i> Continuar
+         Continuar
        </button>
      </form>
    </section>

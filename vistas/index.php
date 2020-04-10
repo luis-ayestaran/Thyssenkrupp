@@ -1,6 +1,6 @@
 
 <div class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-light" >
-  <form method="post" action="index.php?c=preguntas_controler&m=opmath" onsubmit="">
+  <form method="post" action="index.php?c=respuetas_controler&m=index" onsubmit="">
    <h1 class="display-6 font-weight-normal text-primary">Operaciones básicas</h1>
     <br>
     <br>
@@ -29,7 +29,7 @@
                  <p class="card-text"><hi><?php echo $data['operador']?> </h1><hi><?php echo $data['num2']?></h1></p>
                  <hr>
                  <section class="container text-center">
-                     <input class="form-control" type="number" placeholder="" aria-label="Search" id="txt_resp_opmat<?php echo $cont_preg; ?>" name="txt_resp_opmat<?php echo $cont_preg; ?>" style="width: 90%; display: inline !important;" required>
+                     <input class="form-control" type="number" min="0" placeholder="" aria-label="Search" id="txt_resp_opmat<?php echo $cont_preg; ?>" name="txt_resp_opmat<?php echo $cont_preg; ?>" style="width: 90%; display: inline !important;" required>
                   </section>
                  <div class="d-flex justify-content-between align-items-center">
                    <div class="btn-group">
@@ -77,7 +77,7 @@
 
                  <hr>
                  <section class="container text-center">
-                     <input class="form-control" type="number" placeholder="" aria-label="Search" name="txt_buscar" style="width: 90%; display: inline !important;" required>
+                     <input class="form-control" type="number" min="0" placeholder="" aria-label="Search" name="txt_buscar" style="width: 90%; display: inline !important;" required>
                   </section>
                  <div class="d-flex justify-content-between align-items-center">
                    <div class="btn-group">
@@ -209,7 +209,7 @@
 
                  <hr>
                  <section class="container text-center">
-                     <input class="form-control" type="number" placeholder="" aria-label="Search" name="txt_buscar" style="width: 20%; display: inline !important;" required>
+                     <input class="form-control" type="number" min="0" placeholder="" aria-label="Search" name="txt_buscar" style="width: 20%; display: inline !important;" required>
                   </section>
                  <div class="d-flex justify-content-between align-items-center">
                    <div class="btn-group">
@@ -253,9 +253,9 @@
                                             echo $numfracc_imagen["path"]?>" height="250"  alt="">
                <div class="card-body">
                  <section class="container text-center">
-                     <input class="form-control" type="number" placeholder="" aria-label="Search" name="txt_buscar" style="width: 20%; display: inline !important;" required>
+                     <input class="form-control" type="number" min="0" placeholder="" aria-label="Search" name="txt_buscar" style="width: 20%; display: inline !important;" required>
                      <hr>
-                    <input class="form-control" type="number" placeholder="" aria-label="Search" name="txt_buscar" style="width: 20%; display: inline !important;" required>
+                    <input class="form-control" type="number" min="0" placeholder="" aria-label="Search" name="txt_buscar" style="width: 20%; display: inline !important;" required>
                   </section>
                  <div class="d-flex justify-content-between align-items-center">
                    <div class="btn-group">
@@ -301,7 +301,7 @@
 
                  <hr>
                  <section class="container text-center">
-                     <input class="form-control" type="number" pattern="[0-9]+[.[0-9]{2}]?" placeholder="" aria-label="Search" name="txt_buscar" style="width: 90%; display: inline !important;" required>
+                     <input class="form-control" type="number" min="0" pattern="[0-9]+(.[0-9]{2})?" placeholder="" aria-label="Search" name="txt_buscar" style="width: 90%; display: inline !important;" required>
                   </section>
                  <div class="d-flex justify-content-between align-items-center">
                    <div class="btn-group">
@@ -361,7 +361,7 @@
            <?php $i++;
           endforeach;?>
           <div class="card-body">
-          <button class="btn btn-lg btn-primary" type="submit" name="btn_buscar" style="display: inline;">
+          <button class="btn btn-lg btn-primary" type="submit" id="btnCalificar" name="btnCalificar" style="display: inline;">
             Finalizar prueba
           </button>
       </div>

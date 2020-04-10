@@ -54,23 +54,21 @@
         }
 
         function crea_usuario() {
-          if(isset($_REQUEST['txt_nombre'])) {
-            $usuario_data['nombre']=$_REQUEST['txt_nombre'];
-            $usuario_data['direccion']=$_REQUEST['txt_direccion'];
-            $usuario_data['ubicRef']=$_REQUEST['slct_lugares'];
-            $usuario_data['puesto']=$_REQUEST['txt_puesto'];
-            $usuario_data['area']=$_REQUEST['txt_area'];
-            $usuario_data['numTel']=$_REQUEST['txt_telefono'];
-            $this->model_u->create($usuario_data);
-            $usuario_data = $this->model_u->find($_REQUEST['txt_nombre']);
-            include_once('servicios/autenticacion/autenticacion.php');
-            include('vistas/header.php');
-            include('vistas/contenido/eventos.php');
-            include('vistas/footer.php');
+          session_start();
+          if(isset($_SESSION['nombre']) && $_SESSION['nombre'] != '') {
+            header('Location: index.php');
           } else {
-            session_start();
-            if(isset($_SESSION['nombre']) && $_SESSION['nombre'] != '') {
-              include('vistas/header.php');
+            if(isset($_REQUEST['txt_nombre'])) {
+              $usuario_data['nombre']=$_REQUEST['txt_nombre'];
+              $usuario_data['direccion']=$_REQUEST['txt_direccion'];
+              $usuario_data['ubicRef']=$_REQUEST['slct_lugares'];
+              $usuario_data['puesto']=$_REQUEST['txt_puesto'];
+              $usuario_data['area']=$_REQUEST['txt_area'];
+              $usuario_data['numTel']=$_REQUEST['txt_telefono'];
+              $this->model_u->create($usuario_data);
+              $usuario_data = $this->model_u->find($_REQUEST['txt_nombre']);
+              include_once('servicios/autenticacion/autenticacion.php');
+              include('vistas/contenido/header.php');
               include('vistas/contenido/eventos.php');
               include('vistas/footer.php');
             } else {
@@ -80,6 +78,5 @@
             }
           }
         }
-
     }
 ?>

@@ -4,6 +4,7 @@
     require_once('controlador/usuario_controller.php');
     require_once('controlador/evento_controller.php');
     require_once('controlador/preguntas_controller.php');
+    require_once('controlador/respuestas_controller.php');
     require_once('controlador/controller.php');
     /*require_once('controlador/atractivo_controller.php');
     require_once('controlador/recinto_controller.php');
@@ -15,6 +16,7 @@
     $evento_controller = new Evento_controller();
     $usuario_controller = new Usuario_controller();
     $preguntas_controller = new preguntas_controller();
+    $respuestas_controller = new Respuestas_controller();
 
     if(!empty($_REQUEST['c'])) {
       $controlador = $_REQUEST['c'];

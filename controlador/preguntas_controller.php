@@ -134,25 +134,30 @@
        }
 
     function index() {
-      $operacionesmatematicas = $this->opmath();
-      //$imagenes_opmat = $this->get_opmat_imagenes($operacionesmatematicas);
-      $cadenanumero = $this->cadnum();
-      //$imagenes_cadnum = get_cadnum_imagenes($cadenanumero);
-      $numerocadena = $this->numcad();
-      //$imagenes_numcad = get_numcad_imagenes($numerocadena);
-      $fracciones = $this->numfracc();
-      $fraccionesaux = $fracciones;
-      $imagenes_fracc = $this->get_numfracc_imagenes($fraccionesaux);
-      $problemas = $this->prob();
-      //$imagenes_problem = get_prob_imagenes($problemas);
-      $valorposicional=$this->valorposicional();
-      $operacionesporcentaje=$this->porcentaje();
-      $graficas=$this->graficas();
-      $graficasaux=$graficas;
-      $imagenes_valpos = $this->get_valpos_imagenes($graficasaux);
-      include_once('vistas/contenido/header.php');
-      include_once('vistas/index.php');
-      include_once('vistas/contenido/footer.php');
+      session_start();
+      if(isset($_SESSION['nombre']) && $_SESSION['nombre'] != '') {
+        $operacionesmatematicas = $this->opmath();
+        //$imagenes_opmat = $this->get_opmat_imagenes($operacionesmatematicas);
+        $cadenanumero = $this->cadnum();
+        //$imagenes_cadnum = get_cadnum_imagenes($cadenanumero);
+        $numerocadena = $this->numcad();
+        //$imagenes_numcad = get_numcad_imagenes($numerocadena);
+        $fracciones = $this->numfracc();
+        $fraccionesaux = $fracciones;
+        $imagenes_fracc = $this->get_numfracc_imagenes($fraccionesaux);
+        $problemas = $this->prob();
+        //$imagenes_problem = get_prob_imagenes($problemas);
+        $valorposicional=$this->valorposicional();
+        $operacionesporcentaje=$this->porcentaje();
+        $graficas=$this->graficas();
+        $graficasaux=$graficas;
+        $imagenes_valpos = $this->get_valpos_imagenes($graficasaux);
+        include_once('vistas/contenido/header.php');
+        include_once('vistas/index.php');
+        include_once('vistas/contenido/footer.php');
+      } else {
+        header("Location: index.php?c=controller&m=signup");
+      }
     }
 
   }
