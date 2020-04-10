@@ -2,10 +2,10 @@
 
     require_once('modelo/model.php');
 
-    class numfracc_model extends Model {
+    class respuestas_cadenanum_model extends Model {
 
       function get(){
-          $sql= 'SELECT * FROM numfraccion ORDER BY id_pregunta ASC';
+          $sql= 'SELECT * FROM resp_valorposicion ORDER BY id_respuesta ASC';
           $fila=$this->DB->query($sql);
           $this->registros=$fila;
           return  $this->registros;
@@ -14,23 +14,22 @@
       function create($data){
 
           $this->DB->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-          $sql="INSERT INTO numfraccion(numerador,denominador,id_pregunta,id_evaluacion,id_imagen)VALUES (?,?,?,?,?)";
+          $sql="INSERT INTO resp_valorposicion(id_respuesta,respuesta,id_pregunta)VALUES (?,?,?)";
 
           $query = $this->DB->prepare($sql);
-          $query->execute(array($data['numerador'],$data['denominador'],$data['id_pregunta'],$data['id_evaluacion'],$data['id_imagen']));
+          $query->execute(array($data['id_respuesta'],$data['respuesta'],$data['id_pregunta']));
           Database::disconnect();
 
       }
 
       function get_id($id){
           $this->DB->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-          $sql = "SELECT * FROM numfraccion where id_pregunta = ?";
+          $sql = "SELECT * FROM resp_valorposicion where id_respuesta = ?";
           $q = $this->DB->prepare($sql);
           $q->execute(array($id));
           $data = $q->fetch(PDO::FETCH_ASSOC);
           return $data;
       }
-
 
     }
 ?>
