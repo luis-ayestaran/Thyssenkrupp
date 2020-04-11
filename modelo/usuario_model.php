@@ -41,7 +41,7 @@
 
         function find($nombre) {
           $this->DB->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-          $sql = "SELECT nombre, direccion, ubicRef, puesto, area, numTel FROM usuario WHERE nombre = ?";
+          $sql = "SELECT * FROM usuario WHERE nombre = ?";
           $q = $this->DB->prepare($sql);
           $q->execute(array($nombre));
           $data = $q->fetch(PDO::FETCH_ASSOC);

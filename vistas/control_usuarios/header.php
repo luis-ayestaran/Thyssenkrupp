@@ -8,14 +8,14 @@
     <link rel="stylesheet" type="text/css" href="style/css/style.css">
     <link rel="stylesheet" type="text/css" href="style/css/login.css">
     <link rel="stylesheet" type="text/css" href="style/css/fixed.css">
-    <title>ThyssenKrupp | Inicio de sesión </title>
+    <title>ThyssenKrupp | Registro </title>
   </head>
   <body>
     <br><br><br>
     <header>
     </header>
     <nav class="navbar navbar-expand-md navbar-light bg-light fixed-top">
-      <a class="navbar-brand logo" href="index.php">
+      <a class="navbar-brand logo" href="https://www.thyssenkrupp.com/" target="_blank">
         <h5><b>
           <img src="style/images/thyssenkrupp_logo.png" class="img-fluid" alt="ThyssenKrupp logo" width="50" height="50" style="margin: 0 0.4em;">
           <h3 style="color: var(--thyssenkrupp); display: inline;"><b>thyssenkrupp</b></h3>

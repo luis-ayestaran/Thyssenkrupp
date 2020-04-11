@@ -14,10 +14,10 @@
       function create($data){
 
           $this->DB->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-          $sql="INSERT INTO resp_numerocadena(id_respuesta,respUsuario,id_pregunta)VALUES (?,?,?)";
+          $sql="INSERT INTO resp_numerocadena(respUsuario, id_pregunta, id_evaluacion) VALUES (?, ?, ?)";
 
           $query = $this->DB->prepare($sql);
-          $query->execute(array($data['id_respuesta'],$data['respUsuario'],$data['id_pregunta']));
+          $query->execute(array($data['respUsuario'], $data['id_pregunta'], $data['id_evaluacion']));
           Database::disconnect();
 
       }

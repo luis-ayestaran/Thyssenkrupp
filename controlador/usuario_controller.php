@@ -26,10 +26,10 @@
             $usuario_data = NULL;
             $usuario_data = $this->model_u->authenticate($_REQUEST['txt_username'], $_REQUEST['txt_contrasena']);
             if($usuario_data != NULL) {
-              include_once('servicios/autenticacion/autenticacion.php');
-              include_once('vistas/header.php');
-              include_once('vistas/index.php');
-              include_once('vistas/footer.php');
+              include('servicios/autenticacion/autenticacion.php');
+              include('vistas/header.php');
+              include('vistas/index.php');
+              include('vistas/footer.php');
             } else {
               $error_login = "<b>Error de autenticación.</b><p class='font-weight-light'> Usuario o contraseña incorrectos.</p>";
               include_once('vistas/control_usuarios/login.php');
@@ -42,15 +42,10 @@
 
         function cierra_sesion() {
           session_start();
-
           session_unset();
-
           session_destroy();
 
-          include_once('servicios/autenticacion/datos_usuario.php');
-          include_once('vistas/header.php');
-          include_once('vistas/index.php');
-          include_once('vistas/footer.php');
+          header('Location: index.php?c=controller&m=signup');
         }
 
         function crea_usuario() {
@@ -58,23 +53,21 @@
           if(isset($_SESSION['nombre']) && $_SESSION['nombre'] != '') {
             header('Location: index.php');
           } else {
-            if(isset($_REQUEST['txt_nombre'])) {
-              $usuario_data['nombre']=$_REQUEST['txt_nombre'];
-              $usuario_data['direccion']=$_REQUEST['txt_direccion'];
-              $usuario_data['ubicRef']=$_REQUEST['slct_lugares'];
-              $usuario_data['puesto']=$_REQUEST['txt_puesto'];
-              $usuario_data['area']=$_REQUEST['txt_area'];
-              $usuario_data['numTel']=$_REQUEST['txt_telefono'];
+            if(isset($_REQUEST)) {
+              $usuario_data['nombre']=trim(strtoupper($_REQUEST['txt_nombre']));
+              $usuario_data['direccion']=trim(strtoupper($_REQUEST['txt_direccion']));
+              $usuario_data['ubicRef']=trim(strtoupper($_REQUEST['slct_lugares']));
+              $usuario_data['puesto']=trim(strtoupper($_REQUEST['txt_puesto']));
+              $usuario_data['area']=trim(strtoupper($_REQUEST['txt_area']));
+              $usuario_data['numTel']=trim(strtoupper($_REQUEST['txt_telefono']));
               $this->model_u->create($usuario_data);
               $usuario_data = $this->model_u->find($_REQUEST['txt_nombre']);
-              include_once('servicios/autenticacion/autenticacion.php');
+              include('servicios/autenticacion/autenticacion.php');
               include('vistas/contenido/header.php');
               include('vistas/contenido/eventos.php');
               include('vistas/footer.php');
             } else {
-              include('vistas/control_usuarios/header.php');
-              include('vistas/control_usuarios/signup.php');
-              include('vistas/control_usuarios/footer.php');
+              header('Location: index.php');
             }
           }
         }

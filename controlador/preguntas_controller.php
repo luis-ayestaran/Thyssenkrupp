@@ -102,12 +102,9 @@
       return $prob_imagenes;
     }
 
-    function valorposicional(){
-
+    function valorposicional() {
          $query=$this->model_vp->get_valorposicional();
-
          return $query;
-
      }
 
     function get_valpos_imagenes($valpos_preguntas) {
@@ -115,21 +112,17 @@
       foreach($valpos_preguntas as $pregunta) {
         $imagen = $this->model_img->get_id($pregunta['id_imagen']);
         array_push($valpos_imagenes, $imagen);
-
       }
       return $valpos_imagenes;
     }
 
      function porcentaje(){
-
          $query=$this->model_op_math->get_porcentop();
-
          return $query;
      }
-     function graficas(){
 
+     function graficas() {
          $query=$this->model_vp->get_graficas();
-
          return $query;
        }
 

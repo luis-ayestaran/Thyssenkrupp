@@ -5,6 +5,7 @@
   }
   if(isset($usuario_data)) {
     if($usuario_data['nombre'] != '') {
+      $_SESSION['id_usuario'] = $usuario_data['id_usuario'];
       $_SESSION['nombre'] = $usuario_data['nombre'];
       $_SESSION['direccion'] = $usuario_data['direccion'];
       $_SESSION['ubicRef'] = $usuario_data['ubicRef'];
