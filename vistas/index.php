@@ -217,7 +217,7 @@
            <div class="col-md-12">
              <div class="card mb-12 box-shadow">
                <div class="card-body">
-                 <p class="card-text "><a class="text-primary"><?php echo $cont_preg . ". "; ?></a><?php echo $data['enunciado']; ?></p>
+                 <p class="text-left "><a class="text-primary"><?php echo $cont_preg . ". "; ?></a><?php echo $data['enunciado']; ?></p>
 
                  <hr>
                  <section class="container text-center">
@@ -295,7 +295,7 @@
    </div>
    <div class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-light">
    <h1 class="display-6 font-weight-normal text-primary">Porcentajes</h1>
-   <h4>Calcula los siguientes porcentajes sin utilizar decimales.</h4>
+   <h4>Calcula los siguientes porcentajes, utilizando dos decimales en caso de ser necesario.</h4>
    <br>
    <br>
    <div class="container">
@@ -323,7 +323,7 @@
 
                  <hr>
                  <section class="container text-center">
-                     <input class="form-control" type="number" min="0" placeholder="" aria-label="Search" name="txt_resp_opporcent<?php echo $cont_preg; ?>" style="width: 90%; display: inline !important;" required>
+                     <input class="form-control" type="number" step="any" min="0" placeholder="" aria-label="Search" name="txt_resp_opporcent<?php echo $cont_preg; ?>" style="width: 90%; display: inline !important;" required>
                  </section>
                  <div class="d-flex justify-content-between align-items-center">
                    <div class="btn-group">
