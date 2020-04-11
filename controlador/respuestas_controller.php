@@ -109,6 +109,7 @@
       $this->registrar_resp_prob($evaluacion);
       $this->registrar_resp_valorposicional($evaluacion);
       $this->registrar_resp_porcentaje($evaluacion);
+      $this->registrar_resp_graficas($evaluacion);
     }
 
     function registrar_resp_opmath($evaluacion) {
@@ -324,7 +325,7 @@
        $i = 1;
        $preguntas = $this->preguntas_controller->graficas();
        foreach($preguntas as $pregunta) {
-         $respuesta['respuesta'] = strtoupper(trim($_REQUEST['txt_resp_prob' . strval($i)]));
+         $respuesta['respuesta'] = strtoupper(trim($_REQUEST['txt_resp_graf' . strval($i)]));
          $respuesta['id_pregunta'] = $pregunta['id_pregunta'];
          $respuesta['id_evaluacion'] = $evaluacion['id_evaluacion'];
          if(strtoupper(trim($respuesta['respuesta'])) == strtoupper(trim($pregunta['resp']))) {

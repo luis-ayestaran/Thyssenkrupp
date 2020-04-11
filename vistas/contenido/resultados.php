@@ -475,7 +475,7 @@
           </tr>
         </thead>
         <tbody>
-          <?php foreach($errores_numerofracc as $error):?>
+          <?php foreach($errores_graficas as $error):?>
           <tr class="table-danger">
             <td class="table-danger"><?php echo $error['id_pregunta']; ?></td>
             <td class="table-danger"><?php echo $error['resp_usuario']; ?></td>
@@ -489,7 +489,7 @@
 </div>
 
 <div class="container">
-  <form method="post" action="index.php?c=usuario_controller&m=cierra_sesion" onsubmit="">
+  <form method="post" action="index.php?c=usuario_controller&m=cierra_sesion">
     <div class="container text-center">
       <button class="btn btn-lg btn-primary" type="submit" id="btnSalir" name="btnSalir" style="display: inline;">
         Terminar evaluación
