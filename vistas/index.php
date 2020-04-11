@@ -2,6 +2,7 @@
 <div class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-light" >
   <form method="post" action="index.php?c=respuestas_controller&m=mostrar_resultados" onsubmit="">
    <h1 class="display-6 font-weight-normal text-primary">Operaciones básicas</h1>
+    <h4>Contesta las siguientes operacones sin utilizar calculadora y sólo número sin punto decimal.</h4>
     <br>
     <br>
     <div class="container">
@@ -52,6 +53,7 @@
 
     <div class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-light border: black 3px solid">
    <h1 class="display-6 font-weight-normal text-primary">Lectura y escritura de números naturales</h1>
+      <h4>Completa con números o letras según corresponda.</h4>
     <br>
     <br>
            <div class="container">
@@ -138,7 +140,8 @@
 
    <div class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-light">
    <h1 class="display-6 font-weight-normal text-primary">Valor de posición de números naturales</h1>
-   <br>
+     <h4>Observa esta imagen y contesta el número con letras.</h4>
+    <br>
      <div class="text-center">
       <img src="style/images/posicional.png" class="img-fluid" alt="Responsive image">
      </div>
@@ -191,6 +194,7 @@
    </div>
    <div class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-light">
    <h1 class="display-6 font-weight-normal text-primary">Problemas matemáticos</h1>
+    <h4>Resuelve el siguiente problema.</h4>
    <br>
    <br>
    <div class="container">
@@ -237,6 +241,7 @@
    </div>
    <div class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-light">
    <h1 class="display-6 font-weight-normal text-primary">Números fraccionarios</h1>
+   <h4>Escribe la fracción correspondiente.</h4>
    <br>
    <br>
    <div class="container">
@@ -263,12 +268,12 @@
                  <p class="text-left text-primary"><?php echo $cont_preg . "."; ?></p>
                </section>
                <img class="card-img-top" src="<?php  $numfracc_imagen = array_shift($imagenes_fracc);
-                                            echo $numfracc_imagen["path"]?>" height="250"  alt="">
+                                            echo $numfracc_imagen["path"]?>" height="275"  alt="">
                <div class="card-body">
                  <section class="container text-center">
-                     <input class="form-control" type="number" min="0" placeholder="" aria-label="Search" name="txt_num_numfracc<?php echo $cont_preg; ?>" style="width: 20%; display: inline !important;" required>
+                     <input class="form-control" type="number" min="0" placeholder="" aria-label="Search" name="txt_num_numfracc<?php echo $cont_preg; ?>" style="width: 25%; display: inline !important;" required>
                      <hr>
-                    <input class="form-control" type="number" min="0" placeholder="" aria-label="Search" name="txt_den_numfracc<?php echo $cont_preg; ?>" style="width: 20%; display: inline !important;" required>
+                    <input class="form-control" type="number" min="0" placeholder="" aria-label="Search" name="txt_den_numfracc<?php echo $cont_preg; ?>" style="width: 25%; display: inline !important;" required>
                   </section>
                  <div class="d-flex justify-content-between align-items-center">
                    <div class="btn-group">
@@ -290,6 +295,7 @@
    </div>
    <div class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-light">
    <h1 class="display-6 font-weight-normal text-primary">Porcentajes</h1>
+   <h4>Calcula los siguientes porcentajes sin utilizar decimales.</h4>
    <br>
    <br>
    <div class="container">
@@ -339,6 +345,7 @@
    </div>
    <div class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-light">
    <h1 class="display-6 font-weight-normal text-primary">Gráficas</h1>
+    <h4>Completa el nombre de las siguientes gráficas</h4>
     <br>
     <br>
     <div class="container">
@@ -365,7 +372,9 @@
                  <img class="card-img-top" src="<?php  $posimages = array_shift($imagenes_valpos);
                                               echo $posimages["path"]?>" height="250"  alt="">
 
-                 <hr>
+                  <br>
+                  <br>
+                 <h5>Gráfica de:</h5>
                  <section class="container text-center">
                      <input class="form-control" type="text" placeholder="" aria-label="Search" name="txt_resp_graf<?php echo $cont_preg; ?>" style="width: 90%; display: inline !important;" required>
                   </section>
