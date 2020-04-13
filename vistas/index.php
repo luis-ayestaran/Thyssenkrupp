@@ -116,7 +116,7 @@
                           <p class="card-text "><?php echo $data['num']?></p>
                           <hr>
                           <section class="container text-center">
-                              <input class="form-control" type="text" placeholder="" aria-label="Search" name="txt_resp_numcad<?php echo $cont_aux; ?>" style="width: 90%; display: inline !important;" required>
+                              <input class="form-control" type="text" autocomplete="off" placeholder="" aria-label="Search" name="txt_resp_numcad<?php echo $cont_aux; ?>" style="width: 90%; display: inline !important;" required>
                            </section>
                           <div class="d-flex justify-content-between align-items-center">
                             <div class="btn-group">
@@ -172,7 +172,7 @@
 
                  <hr>
                  <section class="container text-center">
-                     <input class="form-control" type="text" placeholder="" aria-label="Search" name="txt_resp_valpos<?php echo $cont_preg; ?>" style="width: 90%; display: inline !important;" required>
+                     <input class="form-control" type="text" autocomplete="off" placeholder="" aria-label="Search" name="txt_resp_valpos<?php echo $cont_preg; ?>" style="width: 90%; display: inline !important;" required>
                   </section>
                  <div class="d-flex justify-content-between align-items-center">
                    <div class="btn-group">
@@ -376,7 +376,7 @@
                   <br>
                  <h5>Gráfica de:</h5>
                  <section class="container text-center">
-                     <input class="form-control" type="text" placeholder="" aria-label="Search" name="txt_resp_graf<?php echo $cont_preg; ?>" style="width: 90%; display: inline !important;" required>
+                     <input class="form-control" type="text" autocomplete="off" placeholder="" aria-label="Search" name="txt_resp_graf<?php echo $cont_preg; ?>" style="width: 90%; display: inline !important;" required>
                   </section>
                  <div class="d-flex justify-content-between align-items-center">
                    <div class="btn-group">
