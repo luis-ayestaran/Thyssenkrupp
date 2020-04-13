@@ -121,7 +121,7 @@
         $respuesta['id_evaluacion'] = $evaluacion['id_evaluacion'];
         if($respuesta['resultado'] == $pregunta['res']) {
 
-          $acierto['id_pregunta'] = $pregunta['id_pregunta'];
+          $acierto['id_pregunta'] = $i;
           $acierto['resp_usuario'] = $respuesta['resultado'];
           $acierto['resp_correcta'] = $pregunta['res'];
           array_push($this->aciertos_opmath, $acierto);
@@ -129,7 +129,7 @@
 
         } else {
 
-          $error['id_pregunta'] = $pregunta['id_pregunta'];
+          $error['id_pregunta'] = $i;
           $error['resp_usuario'] = $respuesta['resultado'];
           $error['resp_correcta'] = $pregunta['res'];
           array_push($this->errores_opmath, $error);
@@ -150,7 +150,7 @@
         $respuesta['id_evaluacion'] = $evaluacion['id_evaluacion'];
         if($respuesta['respUsuario'] == $pregunta['resp']) {
 
-          $acierto['id_pregunta'] = $pregunta['id_pregunta'];
+          $acierto['id_pregunta'] = $i;
           $acierto['resp_usuario'] = $respuesta['respUsuario'];
           $acierto['resp_correcta'] = $pregunta['resp'];
           array_push($this->aciertos_cadnum, $acierto);
@@ -158,7 +158,7 @@
 
         } else {
 
-          $error['id_pregunta'] = $pregunta['id_pregunta'];
+          $error['id_pregunta'] = $i;
           $error['resp_usuario'] = $respuesta['respUsuario'];
           $error['resp_correcta'] = $pregunta['resp'];
           array_push($this->errores_cadnum, $error);
@@ -179,7 +179,7 @@
         $respuesta['id_evaluacion'] = $evaluacion['id_evaluacion'];
         if(strtoupper(trim($respuesta['respUsuario'])) == strtoupper(trim($pregunta['resp']))) {
 
-          $acierto['id_pregunta'] = $pregunta['id_pregunta'];
+          $acierto['id_pregunta'] = $i;
           $acierto['resp_usuario'] = $respuesta['respUsuario'];
           $acierto['resp_correcta'] = $pregunta['resp'];
           array_push($this->aciertos_numcad, $acierto);
@@ -187,7 +187,7 @@
 
         } else {
 
-          $error['id_pregunta'] = $pregunta['id_pregunta'];
+          $error['id_pregunta'] = $i;
           $error['resp_usuario'] = $respuesta['respUsuario'];
           $error['resp_correcta'] = $pregunta['resp'];
           array_push($this->errores_numcad, $error);
@@ -210,7 +210,7 @@
         if($respuesta['numerador'] == $pregunta['numerador'] &&
             $respuesta['denominador'] == $pregunta['denominador']) {
 
-          $acierto['id_pregunta'] = $pregunta['id_pregunta'];
+          $acierto['id_pregunta'] = $i;
           $acierto['numerador_usuario'] = $respuesta['numerador'];
           $acierto['denominador_usuario'] = $respuesta['denominador'];
           $acierto['numerador_correcto'] = $pregunta['numerador'];
@@ -220,7 +220,7 @@
 
         } else {
 
-          $error['id_pregunta'] = $pregunta['id_pregunta'];
+          $error['id_pregunta'] = $i;
           $error['numerador_usuario'] = $respuesta['numerador'];
           $error['denominador_usuario'] = $respuesta['denominador'];
           $error['numerador_correcto'] = $pregunta['numerador'];
@@ -243,7 +243,7 @@
         $respuesta['id_evaluacion'] = $evaluacion['id_evaluacion'];
         if($respuesta['respuesta'] == $pregunta['res']) {
 
-          $acierto['id_pregunta'] = $pregunta['id_pregunta'];
+          $acierto['id_pregunta'] = $i;
           $acierto['resp_usuario'] = $respuesta['respuesta'];
           $acierto['resp_correcta'] = $pregunta['res'];
           array_push($this->aciertos_prob, $acierto);
@@ -251,7 +251,7 @@
 
         } else {
 
-          $error['id_pregunta'] = $pregunta['id_pregunta'];
+          $error['id_pregunta'] = $i;
           $error['resp_usuario'] = $respuesta['respuesta'];
           $error['resp_correcta'] = $pregunta['res'];
           array_push($this->errores_prob, $error);
@@ -272,7 +272,7 @@
           $respuesta['id_evaluacion'] = $evaluacion['id_evaluacion'];
           if(strtoupper(trim($respuesta['respuesta'])) == strtoupper(trim($pregunta['resp']))) {
 
-            $acierto['id_pregunta'] = $pregunta['id_pregunta'];
+            $acierto['id_pregunta'] = $i;
             $acierto['resp_usuario'] = $respuesta['respuesta'];
             $acierto['resp_correcta'] = $pregunta['resp'];
             array_push($this->aciertos_valpos, $acierto);
@@ -280,7 +280,7 @@
 
           } else {
 
-            $error['id_pregunta'] = $pregunta['id_pregunta'];
+            $error['id_pregunta'] = $i;
             $error['resp_usuario'] = $respuesta['respuesta'];
             $error['resp_correcta'] = $pregunta['resp'];
             array_push($this->errores_valpos, $error);
@@ -301,7 +301,7 @@
          $respuesta['id_evaluacion'] = $evaluacion['id_evaluacion'];
          if($respuesta['resultado'] == $pregunta['res']) {
 
-           $acierto['id_pregunta'] = $pregunta['id_pregunta'];
+           $acierto['id_pregunta'] = $i;
            $acierto['resp_usuario'] = $respuesta['resultado'];
            $acierto['resp_correcta'] = $pregunta['res'];
            array_push($this->aciertos_porcent, $acierto);
@@ -309,7 +309,7 @@
 
          } else {
 
-           $error['id_pregunta'] = $pregunta['id_pregunta'];
+           $error['id_pregunta'] = $i;
            $error['resp_usuario'] = $respuesta['resultado'];
            $error['resp_correcta'] = $pregunta['res'];
            array_push($this->errores_porcent, $error);
@@ -330,7 +330,7 @@
          $respuesta['id_evaluacion'] = $evaluacion['id_evaluacion'];
          if(strtoupper(trim($respuesta['respuesta'])) == strtoupper(trim($pregunta['resp']))) {
 
-           $acierto['id_pregunta'] = $pregunta['id_pregunta'];
+           $acierto['id_pregunta'] = $i;
            $acierto['resp_usuario'] = $respuesta['respuesta'];
            $acierto['resp_correcta'] = $pregunta['resp'];
            array_push($this->aciertos_graf, $acierto);
@@ -338,7 +338,7 @@
 
          } else {
 
-           $error['id_pregunta'] = $pregunta['id_pregunta'];
+           $error['id_pregunta'] = $i;
            $error['resp_usuario'] = $respuesta['respuesta'];
            $error['resp_correcta'] = $pregunta['resp'];
            array_push($this->errores_graf, $error);

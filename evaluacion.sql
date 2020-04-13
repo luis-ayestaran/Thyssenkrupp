@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Apr 13, 2020 at 03:59 AM
+-- Generation Time: Apr 13, 2020 at 04:25 AM
 -- Server version: 8.0.13
 -- PHP Version: 7.3.9
 
@@ -56,14 +56,6 @@ CREATE TABLE `evaluacion` (
   `resultado` double NOT NULL,
   `id_usuario` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish2_ci;
-
---
--- Dumping data for table `evaluacion`
---
-
-INSERT INTO `evaluacion` (`id_evaluacion`, `fecha`, `resultado`, `id_usuario`) VALUES
-(157, '2020-04-13 02:19:56', 0, 77),
-(158, '2020-04-13 03:57:32', 0, 77);
 
 -- --------------------------------------------------------
 
@@ -235,20 +227,6 @@ CREATE TABLE `resp_cadenanumero` (
   `id_evaluacion` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish2_ci;
 
---
--- Dumping data for table `resp_cadenanumero`
---
-
-INSERT INTO `resp_cadenanumero` (`id_respuesta`, `respUsuario`, `id_pregunta`, `id_evaluacion`) VALUES
-(617, 9, 4, 157),
-(618, 9, 3, 157),
-(619, 9, 2, 157),
-(620, 9, 1, 157),
-(621, 0, 4, 158),
-(622, 0, 3, 158),
-(623, 0, 2, 158),
-(624, 0, 1, 158);
-
 -- --------------------------------------------------------
 
 --
@@ -261,22 +239,6 @@ CREATE TABLE `resp_numerocadena` (
   `id_pregunta` int(11) NOT NULL,
   `id_evaluacion` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish2_ci;
-
---
--- Dumping data for table `resp_numerocadena`
---
-
-INSERT INTO `resp_numerocadena` (`id_respuesta`, `respUsuario`, `id_pregunta`, `id_evaluacion`) VALUES
-(771, '9', 5, 157),
-(772, '9', 4, 157),
-(773, '9', 3, 157),
-(774, '9', 2, 157),
-(775, '9', 1, 157),
-(776, '0', 5, 158),
-(777, '0', 4, 158),
-(778, '0', 3, 158),
-(779, '0', 2, 158),
-(780, '0', 1, 158);
 
 -- --------------------------------------------------------
 
@@ -292,22 +254,6 @@ CREATE TABLE `resp_numfraccion` (
   `id_evaluacion` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish2_ci;
 
---
--- Dumping data for table `resp_numfraccion`
---
-
-INSERT INTO `resp_numfraccion` (`id_respuesta`, `numerador`, `id_pregunta`, `denominador`, `id_evaluacion`) VALUES
-(771, 9, 1, 9, 157),
-(772, 9, 2, 9, 157),
-(773, 9, 3, 9, 157),
-(774, 9, 4, 9, 157),
-(775, 9, 5, 9, 157),
-(776, 0, 1, 0, 158),
-(777, 0, 2, 0, 158),
-(778, 0, 3, 0, 158),
-(779, 0, 4, 0, 158),
-(780, 0, 5, 0, 158);
-
 -- --------------------------------------------------------
 
 --
@@ -320,100 +266,6 @@ CREATE TABLE `resp_opmatematicas` (
   `id_pregunta` int(11) NOT NULL,
   `id_evaluacion` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish2_ci;
-
---
--- Dumping data for table `resp_opmatematicas`
---
-
-INSERT INTO `resp_opmatematicas` (`id_respuesta`, `resultado`, `id_pregunta`, `id_evaluacion`) VALUES
-(6835, 9, 1, 157),
-(6836, 9, 2, 157),
-(6837, 9, 3, 157),
-(6838, 9, 4, 157),
-(6839, 9, 5, 157),
-(6840, 9, 6, 157),
-(6841, 9, 7, 157),
-(6842, 9, 8, 157),
-(6843, 9, 9, 157),
-(6844, 9, 10, 157),
-(6845, 9, 11, 157),
-(6846, 9, 12, 157),
-(6847, 9, 13, 157),
-(6848, 9, 14, 157),
-(6849, 9, 15, 157),
-(6850, 9, 16, 157),
-(6851, 9, 17, 157),
-(6852, 9, 18, 157),
-(6853, 9, 19, 157),
-(6854, 9, 20, 157),
-(6855, 9, 21, 157),
-(6856, 9, 22, 157),
-(6857, 9, 23, 157),
-(6858, 9, 24, 157),
-(6859, 9, 25, 157),
-(6860, 9, 26, 157),
-(6861, 9, 27, 157),
-(6862, 9, 28, 157),
-(6863, 9, 29, 157),
-(6864, 9, 30, 157),
-(6865, 9, 31, 157),
-(6866, 9, 32, 157),
-(6867, 9, 33, 157),
-(6868, 9, 34, 157),
-(6869, 9, 35, 157),
-(6870, 9, 36, 157),
-(6871, 9, 37, 157),
-(6872, 9, 38, 157),
-(6873, 9, 39, 157),
-(6874, 9, 40, 157),
-(6875, 9, 41, 157),
-(6876, 9, 42, 157),
-(6877, 9, 43, 157),
-(6878, 9, 44, 157),
-(6879, 0, 1, 158),
-(6880, 0, 2, 158),
-(6881, 0, 3, 158),
-(6882, 0, 4, 158),
-(6883, 0, 5, 158),
-(6884, 0, 6, 158),
-(6885, 0, 7, 158),
-(6886, 0, 8, 158),
-(6887, 0, 9, 158),
-(6888, 0, 10, 158),
-(6889, 0, 11, 158),
-(6890, 0, 12, 158),
-(6891, 0, 13, 158),
-(6892, 0, 14, 158),
-(6893, 0, 15, 158),
-(6894, 0, 16, 158),
-(6895, 0, 17, 158),
-(6896, 0, 18, 158),
-(6897, 0, 19, 158),
-(6898, 0, 20, 158),
-(6899, 0, 21, 158),
-(6900, 0, 22, 158),
-(6901, 0, 23, 158),
-(6902, 0, 24, 158),
-(6903, 0, 25, 158),
-(6904, 0, 26, 158),
-(6905, 0, 27, 158),
-(6906, 0, 28, 158),
-(6907, 0, 29, 158),
-(6908, 0, 30, 158),
-(6909, 0, 31, 158),
-(6910, 0, 32, 158),
-(6911, 0, 33, 158),
-(6912, 0, 34, 158),
-(6913, 0, 35, 158),
-(6914, 0, 36, 158),
-(6915, 0, 37, 158),
-(6916, 0, 38, 158),
-(6917, 0, 39, 158),
-(6918, 0, 40, 158),
-(6919, 0, 41, 158),
-(6920, 0, 42, 158),
-(6921, 0, 43, 158),
-(6922, 0, 44, 158);
 
 -- --------------------------------------------------------
 
@@ -428,14 +280,6 @@ CREATE TABLE `resp_problema` (
   `id_evaluacion` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish2_ci;
 
---
--- Dumping data for table `resp_problema`
---
-
-INSERT INTO `resp_problema` (`id_respuesta`, `respuesta`, `id_pregunta`, `id_evaluacion`) VALUES
-(155, 9, 1, 157),
-(156, 0, 1, 158);
-
 -- --------------------------------------------------------
 
 --
@@ -448,28 +292,6 @@ CREATE TABLE `resp_valorposicion` (
   `id_pregunta` int(11) NOT NULL,
   `id_evaluacion` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish2_ci;
-
---
--- Dumping data for table `resp_valorposicion`
---
-
-INSERT INTO `resp_valorposicion` (`id_respuesta`, `respuesta`, `id_pregunta`, `id_evaluacion`) VALUES
-(801, '9', 1, 157),
-(802, '9', 2, 157),
-(803, '9', 3, 157),
-(804, '9', 4, 157),
-(805, '9', 5, 157),
-(806, '9', 6, 157),
-(807, '9', 7, 157),
-(808, '9', 8, 157),
-(809, '0', 1, 158),
-(810, '0', 2, 158),
-(811, '0', 3, 158),
-(812, '0', 4, 158),
-(813, '0', 5, 158),
-(814, '0', 6, 158),
-(815, '0', 7, 158),
-(816, '0', 8, 158);
 
 -- --------------------------------------------------------
 
@@ -486,13 +308,6 @@ CREATE TABLE `usuario` (
   `numTel` varchar(10) CHARACTER SET utf8 COLLATE utf8_spanish2_ci NOT NULL,
   `id_usuario` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish2_ci;
-
---
--- Dumping data for table `usuario`
---
-
-INSERT INTO `usuario` (`nombre`, `direccion`, `ubicRef`, `puesto`, `area`, `numTel`, `id_usuario`) VALUES
-('LUIS', 'PUEBLA, PUEBLA', 'PUEBLA', 'GERENCIA', '244', '2441234567', 77);
 
 -- --------------------------------------------------------
 
@@ -640,43 +455,43 @@ ALTER TABLE `valorposicion`
 -- AUTO_INCREMENT for table `evaluacion`
 --
 ALTER TABLE `evaluacion`
-  MODIFY `id_evaluacion` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=159;
+  MODIFY `id_evaluacion` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=162;
 
 --
 -- AUTO_INCREMENT for table `resp_cadenanumero`
 --
 ALTER TABLE `resp_cadenanumero`
-  MODIFY `id_respuesta` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=625;
+  MODIFY `id_respuesta` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=637;
 
 --
 -- AUTO_INCREMENT for table `resp_numerocadena`
 --
 ALTER TABLE `resp_numerocadena`
-  MODIFY `id_respuesta` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=781;
+  MODIFY `id_respuesta` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=796;
 
 --
 -- AUTO_INCREMENT for table `resp_numfraccion`
 --
 ALTER TABLE `resp_numfraccion`
-  MODIFY `id_respuesta` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=781;
+  MODIFY `id_respuesta` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=796;
 
 --
 -- AUTO_INCREMENT for table `resp_opmatematicas`
 --
 ALTER TABLE `resp_opmatematicas`
-  MODIFY `id_respuesta` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6923;
+  MODIFY `id_respuesta` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7055;
 
 --
 -- AUTO_INCREMENT for table `resp_problema`
 --
 ALTER TABLE `resp_problema`
-  MODIFY `id_respuesta` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=157;
+  MODIFY `id_respuesta` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=160;
 
 --
 -- AUTO_INCREMENT for table `resp_valorposicion`
 --
 ALTER TABLE `resp_valorposicion`
-  MODIFY `id_respuesta` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=817;
+  MODIFY `id_respuesta` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=841;
 
 --
 -- AUTO_INCREMENT for table `usuario`
