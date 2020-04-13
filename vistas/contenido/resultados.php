@@ -308,7 +308,7 @@
 
 <hr class="my-5">
 
-<div class="container">
+<div class="container-fluid">
   <div class="row">
     <div class="col-md-12 text-center my-2">
       <h1>Números fraccionarios</h1>

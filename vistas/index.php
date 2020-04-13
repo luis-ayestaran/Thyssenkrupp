@@ -2,7 +2,7 @@
 <div class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-light" >
   <form method="post" action="index.php?c=respuestas_controller&m=mostrar_resultados" onsubmit="">
    <h1 class="display-6 font-weight-normal text-primary">Operaciones básicas</h1>
-    <h4>Contesta las siguientes operacones sin utilizar calculadora y sólo número sin punto decimal.</h4>
+    <h4>Contesta las siguientes operaciones sin utilizar calculadora y sólo número sin punto decimal.</h4>
     <br>
     <br>
     <div class="container">

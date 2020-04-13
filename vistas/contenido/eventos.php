@@ -64,7 +64,7 @@
                <img class="card-img-top" src="style/images/inst4.jpg" height="250" alt="holi">
                <div class="card-body">
                  <h5 class="text-primary"><b>Anotaciones</b></h5>
-                 <p class="card-text">En la hoja en blanco que te proporcionará tu aplicador puedes hacer anotaciones. En caso de necesitar más, menciónelo.</p>
+                 <p class="card-text">En la hoja en blanco que te proporcionará tu aplicador puedes hacer anotaciones. En caso de necesitar más, menciónalo.</p>
                  <div class="d-flex justify-content-between align-items-center">
                    <div class="btn-group">
 
@@ -89,7 +89,7 @@
                <img class="card-img-top" src="style/images/inst6.jpg" height="250" alt="holi">
                <div class="card-body">
                  <h5 class="text-primary"><b>Lectura y escritura de números naturales</b></h5>
-                 <p class="card-text">En esta sección se le mostrarán cifras numéricas que deberá responder con número o letra, según sea el caso. Si se le proporciona un número, deberá hacerlo sin signos de puntuación y si es con letra respetando todos los espacios posibles</p>
+                 <p class="card-text">En esta sección se le mostrarán cifras numéricas que deberá responder con número o letra, según sea el caso. Si se le proporciona un número, deberá hacerlo sin signos de puntuación y si es con letra respetando todos los espacios posibles.</p>
                  <div class="d-flex justify-content-between align-items-center">
                    <div class="btn-group">
 
@@ -104,7 +104,7 @@
                <img class="card-img-top" src="style/images/inst7.png" height="250" alt="holi">
                <div class="card-body">
                  <h5 class="text-primary"><b>Valor de posición de números naturales</b></h5>
-                 <p class="card-text">Para este apartado dependiendo del valor posicional que se te indique, deberás escibir con letra el número que se forme desde esa posición</p>
+                 <p class="card-text">Para este apartado, dependiendo del valor posicional que se te indique, deberás escibir con letra el número que se encuentre en esa posición.</p>
                  <div class="d-flex justify-content-between align-items-center">
                    <div class="btn-group">
 
@@ -119,7 +119,7 @@
                <img class="card-img-top" src="style/images/inst8.jpg" height="250" alt="holi">
                <div class="card-body">
                  <h5 class="text-primary"><b>Problemas matemáticos</b></h5>
-                 <p class="card-text">Se le planteará un problema matemático el cual deberá responder con números sin signos de puntuación </p>
+                 <p class="card-text">Se le planteará un problema matemático el cual deberá responder con números sin signos de puntuación.</p>
                  <div class="d-flex justify-content-between align-items-center">
                    <div class="btn-group">
 
@@ -134,7 +134,7 @@
                <img class="card-img-top" src="style/images/inst9.png" height="250"  alt="holi">
                <div class="card-body">
                  <h5 class="text-primary"><b>Números fraccionarios</b></h5>
-                 <p class="card-text">Escribe la fracción correspondiente comenzando por el numerador y después el denominador</p>
+                 <p class="card-text">Escribe la fracción correspondiente comenzando por el numerador y después el denominador.</p>
                  <div class="d-flex justify-content-between align-items-center">
                    <div class="btn-group">
 
@@ -164,12 +164,7 @@
                <img class="card-img-top" src="style/images/inst11.jpg" height="250" alt="holi">
                <div class="card-body">
                  <h5 class="text-primary"><b>Gráficas</b></h5>
-                 <p class="card-text">En este apartado sólo deberá indicar el nombre de la grafica correspondiente </p>
-                 <div class="d-flex justify-content-between align-items-center">
-                   <div class="btn-group">
-
-                   </div>
-                 </div>
+                 <p class="card-text">En este apartado sólo deberá indicar el nombre de la gráfica correspondiente.</p>
                </div>
              </div>
            </div>
@@ -180,7 +175,7 @@
 
     <form method="post" action="index.php?c=preguntas_controller&m=index">
        <button class="btn btn-lg btn-primary" type="submit" name="btn_buscar" style="display: inline;">
-         Continuar
+         Comenzar prueba
        </button>
      </form>
    </section>
