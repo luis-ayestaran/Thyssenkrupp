@@ -19,7 +19,7 @@
                <img class="card-img-top" src="style/images/inst1.gif" height="250"alt="holi">
                <div class="card-body">
                  <h5 class="text-primary"><b>Tiempo reglamentario</b></h5>
-                 <p class="card-text">Contarás con 60 minutos para resolver la evaluación</p>
+                 <p class="card-text">Contarás con 60 minutos para resolver la evaluación.</p>
                  <div class="d-flex justify-content-between align-items-center">
                    <div class="btn-group">
 
@@ -34,7 +34,7 @@
                <img class="card-img-top" src="style/images/inst2.jpg" height="250" alt="holi">
                <div class="card-body">
                  <h5 class="text-primary"><b>Lee con atención</b></h5>
-                 <p class="card-text">Lee cada pregunta con atención y contesta con la respuesta que creas es la correcta</p>
+                 <p class="card-text">Lee cada pregunta con atención y contesta con la respuesta correcta.</p>
                  <div class="d-flex justify-content-between align-items-center">
                    <div class="btn-group">
 
@@ -49,7 +49,7 @@
                <img class="card-img-top" src="style/images/inst3.jpg" height="250" alt="holi">
                <div class="card-body">
                  <h5 class="text-primary"><b>Uso de calculadora</b></h5>
-                 <p class="card-text">No puedes usar calculadora ni celular</p>
+                 <p class="card-text">No puedes usar calculadora ni celular.</p>
                  <div class="d-flex justify-content-between align-items-center">
                    <div class="btn-group">
 
@@ -64,7 +64,7 @@
                <img class="card-img-top" src="style/images/inst4.jpg" height="250" alt="holi">
                <div class="card-body">
                  <h5 class="text-primary"><b>Anotaciones</b></h5>
-                 <p class="card-text">En la hoja en blanco que le proporcionará su aplicador puede hacer anotaciones, en caso de necesitar más méncionelo.</p>
+                 <p class="card-text">En la hoja en blanco que te proporcionará tu aplicador puedes hacer anotaciones. En caso de necesitar más, menciónelo.</p>
                  <div class="d-flex justify-content-between align-items-center">
                    <div class="btn-group">
 
@@ -79,12 +79,7 @@
                <img class="card-img-top" src="style/images/inst5.png" height="250" alt="holi">
                <div class="card-body">
                  <h5 class="text-primary"><b>Operaciones básicas</b></h5>
-                 <p class="card-text">El primer apartado de la evaluación constará de las operaciones de suma, resta, multiplicación y división; la cual deberá responder utilizando solo valores númericos sin signos de puntuación</p>
-                 <div class="d-flex justify-content-between align-items-center">
-                   <div class="btn-group">
-
-                   </div>
-                 </div>
+                 <p class="card-text">El primer apartado de la evaluación constará de operaciones de suma, resta, multiplicación y división; deberá responder esta sección utilizando solo valores númericos sin signos de puntuación.</p>
                </div>
              </div>
            </div>
@@ -94,7 +89,7 @@
                <img class="card-img-top" src="style/images/inst6.jpg" height="250" alt="holi">
                <div class="card-body">
                  <h5 class="text-primary"><b>Lectura y escritura de números naturales</b></h5>
-                 <p class="card-text">En esta sección se le mostrarán cifras númericas que deberá responder con numero o letra, sea el caso, si es con número deberá hacerlo sin signos de puntuación y si es con letra respetando todos los espacios posibles</p>
+                 <p class="card-text">En esta sección se le mostrarán cifras numéricas que deberá responder con número o letra, según sea el caso. Si se le proporciona un número, deberá hacerlo sin signos de puntuación y si es con letra respetando todos los espacios posibles</p>
                  <div class="d-flex justify-content-between align-items-center">
                    <div class="btn-group">
 
